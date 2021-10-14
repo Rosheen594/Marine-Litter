@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "data": {
+      "values": [
+        {"Materials": "Plastic", "Time": 89},
+        {"Materials": "Metal", "Time": 21},
+        {"Materials": "Cloth/textile", "Time": 11},
+        {"Materials": "Processed/worked wood", "Time": 11},
+        {"Materials": "Paper/Cardboard", "Time": 10},
+        {"Materials": "Rubber", "Time": 11},
+        {"Materials": "Glass/ceramics", "Time": 10},
+        {"Materials": "Chemicals", "Time": 1},
+        {"Materials": "unidentified", "Time": 1}
+      ]
+    },
+    "transform": [{
+      "window": [{
+        "op": "sum",
+        "field": "Time",
+        "as": "TotalTime"
+      }],
+      "frame": [null, null]
+    },
+    {
+      "calculate": "datum.Time/datum.TotalTime * 100",
+      "as": "PercentOfTotal"
+    }],
+    "width":900,
+    "height": {"step": 50},
+    "mark": {
+      "type":"bar", 
+      "tooltip": {
+        "content": "encoding"}
+      },
+    "encoding": {
+      "y": {"field": "Materials", "type": "nominal"},
+  
+      "x": {
+        "field": "PercentOfTotal",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "% of total Time"
+      }
+    }
+  
+  }
+  

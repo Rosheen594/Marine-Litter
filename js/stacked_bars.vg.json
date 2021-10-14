@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Rosheen594/W10-Homework/main/data/MLW_Data.csv"
+    },
+    "mark": {
+      "type": "bar",
+      "tooltip": {"content": "encoding"},
+      "cornerRadiusTopLeft": 1,
+      "cornerRadiusTopRight": 1
+    },
+    "encoding": {
+      "x": {"field": "EventYear", "type": "ordinal", "title":"Event Year"},
+      "y": {"aggregate": "count", "title":"Event Numbers"},
+      "color": {"field": "CommunityName","title":"Community Name"}
+  
+  
+        
+    }
+        
+  }
