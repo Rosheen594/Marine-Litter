@@ -7,7 +7,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/Rosheen594/Marine-Litter/main/custom.geo.topojson.json",
+          "url": "https://raw.githubusercontent.com/Rosheen594/Marine-Litter/main/js/custom.geo.topojson.json",
           "format": {"type": "topojson", "feature": "custom.geo"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
