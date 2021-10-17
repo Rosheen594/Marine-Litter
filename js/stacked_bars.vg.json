@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 600,
+    "width": 600,
+    "height": 400,
     "data": {
-      "url": "https://raw.githubusercontent.com/Rosheen594/W10-Homework/main/data/MLW_Data.csv"
+      "url": "https://raw.githubusercontent.com/Rosheen594/Marine-Litter/main/data/MLW_Data.csv"
     },
     "mark": {
       "type": "bar",
